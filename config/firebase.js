@@ -1,14 +1,9 @@
 import { initializeApp } from 'firebase/app';
-import {
-	getAuth,
-	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	onAuthStateChanged,
-	signOut
-} from 'firebase/auth';
+import { getFirestore, serverTimestamp } from 'firebase/firestore';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 
-const config = {
-	apiKey: "AIzaSyBzzaSTr42firr3fx5YcdXhDzB4iBLVBOM",
+const firebaseConfig = {
+  apiKey: "AIzaSyBzzaSTr42firr3fx5YcdXhDzB4iBLVBOM",
   authDomain: "contact-database-9c47b.firebaseapp.com",
   databaseURL: "https://contact-database-9c47b-default-rtdb.firebaseio.com",
   projectId: "contact-database-9c47b",
@@ -18,12 +13,8 @@ const config = {
   measurementId: "G-0WY0798WFC"
 };
 
-initializeApp(config);
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
 
-export {
-	getAuth,
-	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	onAuthStateChanged,
-	signOut
-};
+export { firestore, serverTimestamp };
+export { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut };
