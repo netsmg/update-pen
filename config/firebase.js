@@ -8,12 +8,14 @@ import {
 } from 'firebase/auth';
 
 const config = {
-	apiKey: `${process.env.NEXT_PUBLIC_Firebase_API_Key}`,
-	authDomain: `${process.env.NEXT_PUBLIC_Auth_Domain}`,
-	projectId: `${process.env.NEXT_PUBLIC_Project_Id}`,
-	storageBucket: `${process.env.NEXT_PUBLIC_Storage_Bucket}`,
-	messagingSenderId: `${process.env.NEXT_PUBLIC_Message_Sender_Id}`,
-	appId: `${process.env.NEXT_PUBLIC_App_Id}`
+	apiKey: "AIzaSyBzzaSTr42firr3fx5YcdXhDzB4iBLVBOM",
+  authDomain: "contact-database-9c47b.firebaseapp.com",
+  databaseURL: "https://contact-database-9c47b-default-rtdb.firebaseio.com",
+  projectId: "contact-database-9c47b",
+  storageBucket: "contact-database-9c47b.appspot.com",
+  messagingSenderId: "118822537955",
+  appId: "1:118822537955:web:3ef795baeadbe37b7293d6",
+  measurementId: "G-0WY0798WFC"
 };
 
 initializeApp(config);
